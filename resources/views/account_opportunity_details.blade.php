@@ -40,6 +40,7 @@
                 <br>
 
                 <label style="margin-top: 15px">Account Name:</label> <a href="/account/details/{{$account->id}}">{{$account->name}}</a> <br>
+                <label>Contact Name:</label> <a href="/contact/details/{{$contact->id}}">{{$contact->name}}</a> <br>
                 <label>name:</label> {{$opportunity->name}}<br>
                 <label>online:</label> {{$opportunity->online}}<br>
                 <label>live:</label> {{$opportunity->live}}<br>

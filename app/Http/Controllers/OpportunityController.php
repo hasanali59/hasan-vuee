@@ -27,6 +27,7 @@ class OpportunityController extends Controller
         return view('account_opportunity_details', [
             'opportunity' => AccountOpportunity::with('user')->find($id),
             'account' => AccountOpportunity::find($id)->account,
+            'contact' => AccountOpportunity::find($id)->contact,
             'accounts' => Account::all(),
             'note' => AccountOpportunity::find($id)->note,
             'note_histories' => Note::where('type', '=', 'account-opportunity')->where('type_id', '=', $id)->get(),

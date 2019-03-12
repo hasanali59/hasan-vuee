@@ -10,6 +10,10 @@ class AccountOpportunity extends Model
         return $this->belongsTo(Account::class);
     }
 
+    public function contact(){
+        return $this->belongsTo(Contact::class);
+    }
+
     public function note(){
         return $this->belongsTo(Note::class);
     }

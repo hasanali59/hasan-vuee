@@ -93,7 +93,7 @@
                             @foreach($opportunities as $opportunity)
                                 <tr>
                                     <td> <a href="/opportunity/account/details/{{$opportunity->id}}">{{$opportunity->name}}</a> </td>
-                                    <td>{{$opportunity->amount}}</td>
+                                    <td>{{$opportunity->proposal_amount}}</td>
                                     <td>{{$opportunity->estimated_closing_date}}</td>
                                 </tr>
                             @endforeach
@@ -274,6 +274,19 @@
                         @csrf
 
                         <input type="hidden" value="{{$account->id}}" name="account_id">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Select Contact*</label>
+                                    <select class="form-control form-control-alternative" name="contact_id">
+                                        @foreach($contacts as $contact)
+                                            <option value="{{$contact->id}}">{{$contact->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="row">
                             <div class="col-md-3">

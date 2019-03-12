@@ -122,6 +122,7 @@ class AccountController extends Controller
         $account_opportunity = new AccountOpportunity();
 
         $account_opportunity->account_id = $request->input('account_id');
+        $account_opportunity->contact_id = $request->input('contact_id');
         $account_opportunity->name = $request->input('name');
         $account_opportunity->online = $request->input('online');
         $account_opportunity->live = $request->input('live');
